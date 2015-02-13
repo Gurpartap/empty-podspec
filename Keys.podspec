@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/ashfurrow/empty-podspec.git", :tag => "1.0.0" }
   s.source_files  = "%%SOURCE_FILES%%"
-  s.prepare_command =  "pod keys generate %%PROJECT_NAME%%"
+  s.prepare_command =  %Q[pod keys generate "%%PROJECT_NAME%%"]
   s.framework  = "Foundation"
   s.requires_arc = true
 end
